@@ -53,7 +53,7 @@ func SeedMatrix( matrix *[]float64 ) {
 }
 
 //-----------------------------------------------------------------------------
-// Name: CalculateMatrix
+// Name: CalculateMatrix()
 // Desc: Calcula a multiplicacao das matrizes usando o algoritmo ingenuo.
 //-----------------------------------------------------------------------------
 func CalculateMatrix( A []float64, B []float64, C *[]float64, rows int) {
