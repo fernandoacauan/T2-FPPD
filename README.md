@@ -50,4 +50,5 @@ to deallocate.
 ```bash
 salloc -N 2 -n 16
 mpirun -np 16 ./paralelo
+exit
 ```
