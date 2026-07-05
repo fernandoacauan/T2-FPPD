@@ -56,7 +56,7 @@ func SeedMatrix( matrix *[]float64 ) {
 // Name: CalculateMatrix()
 // Desc: Calcula a multiplicacao das matrizes usando o algoritmo ingenuo.
 //-----------------------------------------------------------------------------
-func CalculateMatrix( A []float64, B []float64, C *[]float64, rows int) {
+func CalculateMatrix( A []float64, B []float64, C *[]float64, rows int ) {
 	for i := 0; i < rows; i++ {
 		for j := 0; j < N; j++ {
 			for k := 0; k < N; k++ {
@@ -101,7 +101,7 @@ func GetChecksum( matrix []float64 ) {
 //-----------------------------------------------------------------------------
 // Name: PushMatrixData()
 // Desc: Distribui os dados pros processos escravos. Envia a matriz B inteira e
-//	 a parte correspondente de A pra cada escravo.
+//	 	 a parte correspondente de A pra cada escravo.
 //-----------------------------------------------------------------------------
 func PushMatrixData( A []float64, B []float64, numProcess int, rowsPerProcess int, mod int ) {
 	// comeca em 1 para skipar a parte do mestre (0 : numElementos)
@@ -154,6 +154,7 @@ func main() {
 	mpi.Init();
 	defer mpi.Finalize();
 
+	start   			= time.Now();
 	rank               := comm.GetRank();
 	numProcess         := comm.GetSize();
 	rowsPerProcess     := N / numProcess;
